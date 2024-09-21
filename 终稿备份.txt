@@ -1,0 +1,724 @@
+#include <stdio.h>
+#include <Windows.h>
+int main()
+{
+	printf("你有五种货物（ABCDE），五个货架（12345），你可以将一种货物放到一个货架上，\n并为他们设置单价（123456789），放入个数（1234567）");
+	Sleep(800);
+	printf("\n按照如\n2 3 4\n的形式输入，\n表示你将X货物放在了2号货架上，单价3元，放了4个\n");
+	char n1, n2, n3, n4, n5;
+	n1 = 'A';
+	n2 = 'B';
+	n3 = 'C';
+	n4 = 'D';
+	n5 = 'E';
+	int l1=100, l2=100, l3=100, l4=100, l5 = 100;
+	int p1 = 199, p2 = 199, p3 = 199, p4 = 199, p5 = 199;
+	int q1 = 174, q2 = 174, q3 = 174, q4 = 174, q5 = 174;
+	Sleep(1500);
+	printf("\n是否摆出A货物？是请输入Y，不是请输入N\n");
+	char a1;
+	a1 = 'N';
+	scanf("%c", &a1);
+	getchar();
+	if (a1 == 'Y')
+	{
+		while (1)
+		{
+			printf("请输入你的指令：\n");
+			scanf_s("%d %d %d", &l1, &p1, &q1);
+			getchar();
+			if (l1 >= 1 && l1 <= 5 && p1 >= 1 && p1 <= 9 && q1 >= 1 && q1 <= 7)
+			{
+				printf("\n你将A货物放入");
+				printf("%d ", l1);
+				printf("号货柜上，放了");
+				printf("%d ", q1);
+				printf("个，并设置了单价为");
+				printf("%d ", p1);
+				printf("元\n\n");
+				break;
+			}
+			else
+			{
+				printf("\n请输入正确形式的指令\n");
+			}
+		}
+	}
+	Sleep(600);
+	printf("\n是否摆出B货物？是请输入Y，不是请输入N\n");
+	char a2 = 'N';
+	scanf("%c", &a2);
+	getchar();
+	if (a2 == 'Y')
+	{
+		while (1)
+		{
+			printf("请输入你的指令：\n");
+			scanf_s("%d %d %d", &l2, &p2, &q2);
+			getchar();
+			if (l2 == l1)
+			{
+				printf("该货架已经有货物了，换一个吧~。~\n");
+			}
+			else if (l2 >= 1 && l2 <= 5 && p2 >= 1 && p2 <= 9 && q2 >= 1 && q2 <= 7 && l2 != l1)
+			{
+				printf("\n你将");
+				printf("%c ", n2);
+				printf("放入");
+				printf("%d ", l2);
+				printf("号货柜上，放了");
+				printf("%d ", q2);
+				printf("个，并设置了单价为");
+				printf("%d ", p2);
+				printf("元\n\n");
+				break;
+			}
+			else
+			{
+				printf("\n请输入正确形式的指令\n");
+			}
+		}
+	}
+	Sleep(600);
+	printf("\n是否摆出C货物？是请输入Y，不是请输入N\n");
+	char a3 = 'N';
+	scanf("%c", &a3);
+	getchar();
+	if (a3 == 'Y')
+	{
+		while (1)
+		{
+			printf("请输入你的指令：\n");
+			scanf_s("%d %d %d", &l3, &p3, &q3);
+			getchar();
+			if (l3 == l1 || l3 == l2)
+			{
+				printf("该货架已经有货物了，换一个吧0.o\n");
+			}
+			else if (l3 >= 1 && l3 <= 5 && p3 >= 1 && p3 <= 9 && q3 >= 1 && q3 <= 7 && l3 != l1 && l3 != l2)
+			{
+				printf("\n你将");
+				printf("%c ", n3);
+				printf("放入");
+				printf("%d ", l3);
+				printf("号货柜上，放了");
+				printf("%d ", q3);
+				printf("个，并设置了单价为");
+				printf("%d ", p3);
+				printf("元\n\n");
+				break;
+			}
+			else
+			{
+				printf("\n请输入正确形式的指令\n");
+			}
+		}
+	}
+	Sleep(600);
+	printf("\n是否摆出D货物？是请输入Y，不是请输入N\n");
+	char a4 = 'N';
+	scanf("%c", &a4);
+	getchar();
+	if (a4 == 'Y')
+	{
+		while (1)
+		{
+			printf("请输入你的指令：\n");
+			scanf_s("%d %d %d", &l4, &p4, &q4);
+			getchar();
+			if (l4 == l1 || l4 == l2 || l4 == l3)
+			{
+				printf("该货架已经有货物了，换一个吧:-(");
+			}
+			else if (l4 >= 1 && l4 <= 5 && p4 >= 1 && p4 <= 9 && q4 >= 1 && q4 <= 7 && l4 != l1 && l4 != l2 && l4 != l3)
+			{
+				printf("\n你将");
+				printf("%c ", n4);
+				printf("放入");
+				printf("%d ", l4);
+				printf("号货柜上，放了");
+				printf("%d ", q4);
+				printf("个，并设置了单价为");
+				printf("%d ", p4);
+				printf("元\n\n");
+				break;
+			}
+			else
+			{
+				printf("\n请输入正确形式的指令\n");
+			}
+		}
+	}
+	Sleep(600);
+	printf("\n是否摆出E货物？是请输入Y，不是请输入N\n");
+	char a5 = 'N';
+	scanf("%c", &a5);
+	getchar();
+	if (a5 == 'Y')
+	{
+		while (1)
+		{
+			printf("请输入你的指令：\n");
+			scanf_s("%d %d %d", &l5, &p5, &q5);
+			getchar();
+			if (l5 == l1 || l5 == l2 || l5 == l3 || l5 == l4)
+			{
+				printf("该货架已经有货物了，换一个吧*_*\n");
+			}
+			else if (n5 >= 'A' && n5 <= 'E' && l5 >= 1 && l5 <= 5 && p5 >= 1 && p5 <= 9 && q5 >= 1 && q5 <= 7 && n5 != n1 && l5 != l1 && n5 != n2 && l5 != l2 && n5 != n3 && l5 != l3 && n5 != n4 && l5 != l4)
+			{
+				printf("\n你将");
+				printf("%c ", n5);
+				printf("放入");
+				printf("%d ", l5);
+				printf("号货柜上，放了");
+				printf("%d ", q5);
+				printf("个，并设置了单价为");
+				printf("%d ", p5);
+				printf("元\n\n");
+				break;
+			}
+			else
+			{
+				printf("\n请输入正确形式的指令\n");
+			}
+		}
+	}
+	printf("您已放好货物\n\n");
+	Sleep(1600);
+	if (a1 == 'Y')
+	{
+		printf("A货物，在");
+		printf("%d", (int)l1);
+		printf("号货架上，单价");
+		printf("%d", (int)p1);
+		printf("元，有");
+		printf("%d", (int)q1);
+		printf("个\n");
+	}
+	if (a2 == 'Y')
+	{
+		printf("B货物，在");
+		printf("%d", (int)l2);
+		printf("号货架上，单价");
+		printf("%d", (int)p2);
+		printf("元，有");
+		printf("%d", (int)q2);
+		printf("个\n");
+	}
+	if (a3 == 'Y')
+	{
+		printf("C货物，在");
+		printf("%d", (int)l3);
+		printf("号货架上，单价");
+		printf("%d", (int)p3);
+		printf("元，有");
+		printf("%d", (int)q3);
+		printf("个\n");
+	}
+	if (a4 == 'Y')
+	{
+		printf("D货物，在");
+		printf("%d", (int)l4);
+		printf("号货架上，单价");
+		printf("%d", (int)p4);
+		printf("元，有");
+		printf("%d", (int)q4);
+		printf("个\n");
+	}
+	if (a5 == 'Y')
+	{
+		printf("E货物，在");
+		printf("%d", (int)l5);
+		printf("号货架上，单价");
+		printf("%d", (int)p5);
+		printf("元，有");
+		printf("%d", (int)q5);
+		printf("个\n");
+	}
+	Sleep(800);
+	char a6, a7, a8;
+	char g;
+	int b=1999;
+	int c=1999;
+	int pay=0;
+	char a10='N';
+	int mm=1999;
+	while (1)
+	{
+		if (a1 == 'Y' || a2 == 'Y' || a3 == 'Y' || a4 == 'Y' || a5 == 'Y')
+		{
+			printf("\n输入1开始售卖\n");
+			scanf("%c", &a6);
+			getchar();
+			Sleep(1200);
+			printf("waiting....");
+			Sleep(3200);
+		}
+		if (a1 != 'Y' && a2 != 'Y' && a3 != 'Y' && a4 != 'Y' && a5 != 'Y')
+		{
+			Sleep(800);
+			printf("没有货物上架，今天不营业");
+			Sleep(800);
+			exit(0);
+		}
+		while (1)
+		{
+			printf("\n\n来了顾客，欢迎光临\n");
+			Sleep(600);
+			printf("\n我们有\n");
+			if (a1 == 'Y')
+			{
+				printf("A货物，在");
+				printf("%d", (int)l1);
+				printf("号货架上，单价");
+				printf("%d", (int)p1);
+				printf("元，有");
+				printf("%d", (int)q1);
+				printf("个\n");
+			}
+			if (a2 == 'Y')
+			{
+				printf("B货物，在");
+				printf("%d", (int)l2);
+				printf("号货架上，单价");
+				printf("%d", (int)p2);
+				printf("元，有");
+				printf("%d", (int)q2);
+				printf("个\n");
+			}
+			if (a3 == 'Y')
+			{
+				printf("C货物，在");
+				printf("%d", (int)l3);
+				printf("号货架上，单价");
+				printf("%d", (int)p3);
+				printf("元，有");
+				printf("%d", (int)q3);
+				printf("个\n");
+			}
+			if (a4 == 'Y')
+			{
+				printf("D货物，在");
+				printf("%d", (int)l4);
+				printf("号货架上，单价");
+				printf("%d", (int)p4);
+				printf("元，有");
+				printf("%d", (int)q4);
+				printf("个\n");
+			}
+			if (a5 == 'Y')
+			{
+				printf("E货物，在");
+				printf("%d", (int)l5);
+				printf("号货架上，单价");
+				printf("%d", (int)p5);
+				printf("元，有");
+				printf("%d", (int)q5);
+				printf("个\n");
+			}
+			Sleep(600);
+			while (1)
+			{
+				printf("\n请问您是否想购买些什么吗？\n");
+				printf("是请按Y，不想购买请按N\n");
+				scanf("%c", &a7);
+				getchar();
+				printf("%c", a7);
+				Sleep(750);
+				if (a7 != 'Y')
+				{
+					printf("欢迎下次再来看看~~");
+					break;
+				}
+				if (a7 == 'Y')
+				{
+					printf("\n您果然是想买点什么\n\n");
+					Sleep(600);
+					printf("如\nA 2\n形式输入，表示您要买两件A货\n\n\n");
+					Sleep(800);
+					while (1)
+					{
+						printf("顾客请输入您想买的货物和件数\n");
+						printf("请输入您的指令：\n");
+						scanf("%c %d", &g, &b);
+						getchar();
+						if (g == 'A' && a1 != 'Y')
+						{
+							Sleep(600);
+							printf("现在不出售该商品呢，再选择一下吧\n");
+							Sleep(540);
+						}
+						else if (g == 'B' && a2 != 'Y')
+						{
+							Sleep(600);
+							printf("现在不出售该商品呢，再选择一下吧\n");
+							Sleep(540);
+						}
+						else if (g == 'C' && a3 != 'Y')
+						{
+							Sleep(600);
+							printf("现在不出售该商品呢，再选择一下吧\n");
+							Sleep(540);
+						}
+						else if (g == 'D' && a4 != 'Y')
+						{
+							Sleep(600);
+							printf("现在不出售该商品呢，再选择一下吧\n");
+							Sleep(540);
+						}
+						else if (g == 'E' && a5 != 'Y')
+						{
+							Sleep(600);
+							printf("现在不出售该商品呢，再选择一下吧\n");
+							Sleep(540);
+						}
+						else if (g == 'A' && b > q1 && b < 1999 && a1 == 'Y')
+						{
+							printf("对不起，我们没有那么多A货物\n");
+							printf("请再次输入您的购买选择：\n");
+						}
+						else if (g == 'B' && b > q2 && b < 1999 && a2 == 'Y')
+						{
+							printf("对不起，我们没有那么多B货物\n");
+							printf("请再次输入您的购买选择：\n");
+						}
+						else if (g == 'C' && b > q3 && b < 1999 && a3 == 'Y')
+						{
+							printf("对不起，我们没有那么多C货物\n");
+							printf("请再次输入您的购买选择：\n");
+						}
+						else if (g == 'D' && b > q4 && b < 1999 && a4 == 'Y')
+						{
+							printf("对不起，我们没有那么多D货物\n");
+							printf("请再次输入您的购买选择：\n");
+						}
+						else if (g == 'E' && b > q5 && b < 1999 && a5 == 'Y')
+						{
+							printf("对不起，我们没有那么多E货物\n");
+							printf("请再次输入您的购买选择：\n");
+						}
+						else if (g == 'A' && b <= q1 && a1 == 'Y')
+						{
+							c = b * p1;
+							printf("您需支付");
+							printf("%d", (int)c);
+							printf("元，您可以选择投入1，2，5，10元\n");
+							printf("请投入：");
+							while (1)
+							{
+								scanf_s("%d", &pay);
+								getchar();
+								if (pay != 1 && pay != 2 && pay != 5 && pay != 10)
+								{
+									printf("抱歉我们不收取此面额的货币，请再次投入：\n");
+								}
+								else if (pay < c)
+								{
+									c = c - pay;
+									printf("您还需支付");
+									printf("%d", (int)c);
+									printf("元，再次支付：\n");
+								}
+								else if (pay == c)
+								{
+									c = c - pay;
+									printf("购买成功！");
+									c = c - c;
+									mm = 1;
+									break;
+								}
+								else if (pay > c)
+								{
+									c = pay - c;
+									printf("购买成功！\n");
+									printf("找您");
+									printf("%d", (int)c);
+									printf("元");
+									c = c - c;
+									mm = 1;
+									printf("%d", mm);
+									break;									
+								}
+							}
+							q1 = q1 - b;
+						}
+						else if (g == 'B' && b <= q2 && a2 == 'Y')
+						{
+							c = b * p2;
+							printf("您需支付");
+							printf("%d", (int)c);
+							printf("元，您可以选择投入1，2，5，10元\n");
+							printf("请投入：");
+							while (1)
+							{
+								scanf_s("%d", &pay);
+								getchar();
+								if (pay != 1 && pay != 2 && pay != 5 && pay != 10)
+								{
+									printf("抱歉我们不收取此面额的货币，请再次投入：\n");
+								}
+								else if (pay < c)
+								{
+									c = c - pay;
+									printf("您还需支付");
+									printf("%d", (int)c);
+									printf("元，再次支付：\n");
+								}
+								else if (pay == c)
+								{
+									c = c - pay;
+									printf("购买成功！");
+									c = c - c;
+									mm = 1;
+									break;
+								}
+								else if (pay > c)
+								{
+									c = pay - c;
+									printf("购买成功！\n");
+									printf("找您");
+									printf("%d", (int)c);
+									printf("元");
+									c = c - c;
+									mm = 1;
+									break;
+								}
+							}
+							q2 = q2 - b;
+						}
+						else if (g == 'C' && b <= q3 && a3 == 'Y')
+						{
+							c = b * p3;
+							printf("您需支付");
+							printf("%d", (int)c);
+							printf("元，您可以选择投入1，2，5，10元\n");
+							printf("请投入：");
+							while (1)
+							{
+								scanf_s("%d", &pay);
+								getchar();
+								if (pay != 1 && pay != 2 && pay != 5 && pay != 10)
+								{
+									printf("抱歉我们不收取此面额的货币，请再次投入：\n");
+								}
+								else if (pay < c)
+								{
+									c = c - pay;
+									printf("您还需支付");
+									printf("%d", (int)c);
+									printf("元，再次支付：\n");
+								}
+								else if (pay == c)
+								{
+									c = c - pay;
+									printf("购买成功！");
+									c = c - c;
+									mm = 1;
+									break;
+								}
+								else if (pay > c)
+								{
+									c = pay - c;
+									printf("购买成功！\n");
+									printf("找您");
+									printf("%d", (int)c);
+									printf("元");
+									c = c - c;
+									mm = 1;
+									break;
+								}
+							}
+							q3 = q3 - b;
+						}
+						else if (g == 'D' && b <= q4 && a4 == 'Y')
+						{
+							c = b * p4;
+							printf("您需支付");
+							printf("%d", (int)c);
+							printf("元，您可以选择投入1，2，5，10元\n");
+							printf("请投入：");
+							while (1)
+							{
+								scanf_s("%d", &pay);
+								getchar();
+								if (pay != 1 && pay != 2 && pay != 5 && pay != 10)
+								{
+									printf("抱歉我们不收取此面额的货币，请再次投入：\n");
+								}
+								else if (pay < c)
+								{
+									c = c - pay;
+									printf("您还需支付");
+									printf("%d", (int)c);
+									printf("元，再次支付：\n");
+								}
+								else if (pay == c)
+								{
+									c = c - pay;
+									printf("购买成功！");
+									c = c - c;
+									mm = 1;
+									break;
+								}
+								else if (pay > c)
+								{
+									c = pay - c;
+									printf("购买成功！\n");
+									printf("找您");
+									printf("%d", (int)c);
+									printf("元");
+									c = c - c;
+									mm = 1;
+									break;
+								}
+							}
+							q4 = q4 - b;
+						}
+						else if (g == 'E' && b <= q5 && a5 == 'Y')
+						{
+							c = b * p5;
+							printf("您需支付");
+							printf("%d", (int)c);
+							printf("元，您可以选择投入1，2，5，10元\n");
+							printf("请投入：");
+							while (1)
+							{
+								scanf_s("%d", &pay);
+								getchar();
+								if (pay != 1 && pay != 2 && pay != 5 && pay != 10)
+								{
+									printf("抱歉我们不收取此面额的货币，请再次投入：\n");
+								}
+								else if (pay < c)
+								{
+									c = c - pay;
+									printf("您还需支付");
+									printf("%d", (int)c);
+									printf("元，再次支付：\n");
+								}
+								else if (pay == c)
+								{
+									c = c - pay;
+									printf("购买成功！");
+									c = c - c;
+									mm = 1;
+									break;
+								}
+								else if (pay > c)
+								{
+									c = pay - c;
+									printf("购买成功！\n");
+									printf("找您");
+									printf("%d", (int)c);
+									printf("元");
+									c = c - c;
+									mm = 1;
+									break;
+								}
+							}
+							q5 = q5 - b;
+						}										
+						else
+						{
+							printf("请输入指定形式的指令：\n");
+						}
+						Sleep(800);
+						printf("\n还继续购买吗？是，请输入Y，不想买了输入别的\n");
+						scanf("%c", &a8);
+						getchar();
+						if (a8 == 'Y')
+						{
+							printf("现在，我们还有：\n\n");
+							if (a1 == 'Y')
+							{
+								printf("A货物，在");
+								printf("%d", (int)l1);
+								printf("号货架上，单价");
+								printf("%d", (int)p1);
+								printf("元，有");
+								printf("%d", (int)q1);
+								printf("个\n");
+							}
+							if (a2 == 'Y')
+							{
+								printf("B货物，在");
+								printf("%d", (int)l2);
+								printf("号货架上，单价");
+								printf("%d", (int)p2);
+								printf("元，有");
+								printf("%d", (int)q2);
+								printf("个\n");
+							}
+							if (a3 == 'Y')
+							{
+								printf("C货物，在");
+								printf("%d", (int)l3);
+								printf("号货架上，单价");
+								printf("%d", (int)p3);
+								printf("元，有");
+								printf("%d", (int)q3);
+								printf("个\n");
+							}
+							if (a4 == 'Y')
+							{
+								printf("D货物，在");
+								printf("%d", (int)l4);
+								printf("号货架上，单价");
+								printf("%d", (int)p4);
+								printf("元，有");
+								printf("%d", (int)q4);
+								printf("个\n");
+							}
+							if (a5 == 'Y')
+							{
+								printf("E货物，在");
+								printf("%d", (int)l5);
+								printf("号货架上，单价");
+								printf("%d", (int)p5);
+								printf("元，有");
+								printf("%d", (int)q5);
+								printf("个\n");
+							}
+							printf("\n");
+						}
+						if (a8 != 'Y')
+						{
+							Sleep(800);
+							printf("购物结束^v^");
+							break;
+						}				
+					}
+					if (a8 != 'Y')
+					{
+						break;
+					}
+				}
+				if (a8 != 'Y')
+				{
+					break;
+				}
+			}
+			if (a8 != 'Y')
+			{
+				break;
+			}
+		}
+		printf("\n\n是否继续揽客？   是，请输入Y；不是，输入别的结束本次售卖\n");
+		scanf("%c", &a10);
+		getchar();
+		if (a10 == 'Y')
+		{
+			printf("继续揽客！！\n");
+			Sleep(1000);
+		}
+		else if (a10 != 'Y')
+		{
+			Sleep(600);
+			printf("结束，也是赚了不少钱了");
+			Sleep(800);
+			break;
+		}
+	}
+	return 0;
+}
